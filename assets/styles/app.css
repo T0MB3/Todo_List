@@ -1,0 +1,160 @@
+/* Styles généraux */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Titre principal */
+h1 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Boutons principaux */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Bouton d'ajout */
+#add-task-btn {
+    font-size: 18px;
+    padding: 12px 18px;
+    margin-bottom: 15px;
+}
+
+/* Boutons de filtrage */
+.filter-btn {
+    background-color: #6c757d;
+}
+
+.filter-btn:hover {
+    background-color: #5a6268;
+}
+
+/* Liste des tâches */
+ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+li {
+    background: white;
+    padding: 12px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+li:hover {
+    transform: scale(1.02);
+}
+
+/* Cases à cocher et texte */
+.task-details {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.task-title {
+    font-size: 16px;
+}
+
+/* Description des tâches */
+.task-description {
+    font-size: 14px;
+    color: #555;
+    font-style: italic;
+    max-width: 400px;
+    text-align: left;
+}
+
+/* Tâches complétées */
+.completed .task-title {
+    text-decoration: line-through;
+    color: gray;
+}
+
+/* Bouton de suppression */
+.delete-btn {
+    background-color: #dc3545;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+/* Pop-up */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    width: 350px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.popup h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.popup input,
+.popup textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.popup-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+#cancel-popup {
+    background-color: #6c757d;
+}
+
+#cancel-popup:hover {
+    background-color: #545b62;
+}
