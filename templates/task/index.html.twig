@@ -1,39 +1,40 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>To-Do List avec Pop-up</title>
-    <link rel="stylesheet" href="{{ asset('styles/app.css') }}">
-</head>
-<body>
+{% extends 'base.html.twig' %}
 
-    <h1>Ma To-Do List</h1>
+{% block title %}Task index{% endblock %}
 
-    <!-- Bouton pour ajouter une tâche -->
-    <button id="add-task-btn">Ajouter une tâche</button>
+{% block body %}
+    <h1>Task index</h1>
 
-    <!-- Boutons de filtrage -->
-    <div>
-        <button class="filter-btn" data-filter="all">Toutes</button>
-        <button class="filter-btn" data-filter="completed">Complétées</button>
-        <button class="filter-btn" data-filter="pending">Non complétées</button>
-    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Task</th>
+                <th>User</th>
+                <th>Category</th>
+                <th><th/>
+            </tr>
+        </thead>
+        <tbody>
+        {% for task in tasks %}
+            <tr>
+                <td>{{ task.id }}</td>
+                <td>{{ task.Task }}</td>
+                <td>{{ task.users|join() }}</td>
+                <td>{{ task.category.name }}</td>
+                
+                <td>
+                    <a href="{{ path('app_task_show', {'id': task.id}) }}">show</a>
+                    <a href="{{ path('app_task_edit', {'id': task.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 
-    <!-- Liste des tâches -->
-    <ul id="task-list"></ul>
-
-    <!-- Fenêtre pop-up -->
-    <div class="popup-overlay"></div>
-    <div class="popup" id="task-popup">
-        <h2>Nouvelle Tâche</h2>
-        <input type="text" id="popup-title" placeholder="Titre de la tâche" required>
-        <textarea id="popup-description" placeholder="Description..."></textarea>
-        <div class="popup-buttons">
-            <button id="cancel-popup">Annuler</button>
-            <button id="confirm-popup">Valider</button>
-        </div>
-    </div>
-
-    <script src="{{ asset('app.js') }}"></script>
-</body>
-</html>
+    <a href="{{ path('app_task_new') }}">Create new</a>
+{% endblock %}

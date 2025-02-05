@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #007bff;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.table th, .table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.table th {
+    background-color: #007bff;
+    color: white;
+    text-transform: uppercase;
+}
+
+.table tr:hover {
+    background-color: #f1f1f1;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.table td:last-child {
+    text-align: center;
+}
+
+.table td:last-child a {
+    padding: 5px 10px;
+    border-radius: 3px;
+    background: #007bff;
+    color: white;
+    transition: 0.3s;
+}
+
+.table td:last-child a:hover {
+    background: #0056b3;
+}
+
+/* Bouton Create New */
+a[href*="app_user_new"] {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background: #28a745;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+a[href*="app_user_new"]:hover {
+    background: #218838;
+
+}
+
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: auto;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    background: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+form button:hover {
+    background: #0056b3;
+}
+
+/* Bouton Retour */
+a[href*="app_user_index"] {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background: #6c757d;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+a[href*="app_user_index"]:hover {
+    background: #5a6268;
+}
